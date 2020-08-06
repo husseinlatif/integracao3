@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm)">
+          <ion-list>
+            <ion-item [class.invalid]=" loginForm.controls.email.invalid && loginForm.controls.email.touched">
+              <ion-input id="email" placeholder="Email" type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item [class.invalid]=" loginForm.controls.password.invalid && loginForm.controls.password.touched">
+              <ion-input id="password" placeholder="Senha" type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+
+            <ion-row class="rowEntrar">
+              <ion-button type="submit" fill="outline" class="buttonEntrar">Entrar</ion-button>
+            </ion-row>
+
+
+
+          </ion-list>
+
+        </form>
+</ion-content>

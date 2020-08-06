@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar rep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="republicForm" (ngSubmit)="submitForm(republicForm)">
+          <ion-list>
+            <ion-item [class.invalid]=" republicForm.controls.title.invalid && republicForm.controls.title.touched">
+              <ion-input id="title" placeholder="nome" type="text" formControlName="title"></ion-input>
+            </ion-item>
+
+            <ion-item [class.invalid]=" republicForm.controls.address.invalid && republicForm.controls.address.touched">
+              <ion-input id="address" placeholder="endereço" type="text" formControlName="address"></ion-input>
+            </ion-item>
+
+            <ion-item [class.invalid]=" republicForm.controls.rental_per_month.invalid && republicForm.controls.rental_per_month.touched">
+              <ion-input id="rental_per_month" placeholder="preço" type="text" formControlName="rental_per_month"></ion-input>
+            </ion-item>
+
+
+            <ion-row class="rowEntrar">
+              <ion-button type="submit" fill="outline" class="buttonEntrar">registrar a rep</ion-button>
+            </ion-row>
+
+
+
+          </ion-list>
+
+        </form>
+</ion-content>

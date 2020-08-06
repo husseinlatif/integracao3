@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+          <ion-list>
+
+            <ion-item [class.invalid]=" registerForm.controls.name.invalid && registerForm.controls.name.touched">
+              <ion-input id="name" placeholder="name" type="text" formControlName="name"></ion-input>
+            </ion-item>
+            
+            <ion-item [class.invalid]=" registerForm.controls.email.invalid && registerForm.controls.email.touched">
+              <ion-input id="email" placeholder="Email" type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item [class.invalid]=" registerForm.controls.password.invalid && registerForm.controls.password.touched">
+              <ion-input id="password" placeholder="Senha" type="text" formControlName="password"></ion-input>
+            </ion-item>
+
+
+            <ion-row class="rowEntrar">
+              <ion-button type="submit" fill="outline"  class="buttonEntrar">Registrar</ion-button>
+            </ion-row>
+
+
+
+          </ion-list>
+
+        </form>
+</ion-content>
